@@ -22,7 +22,7 @@ def update_user(user_id):
 
 def get_user():
     user_id = input("Type in the desired user id:")
-    url = "%s%d" % (URL, user_id)
+    url = "%s%s" % (URL, user_id)
     response = requests.get(url)
     user = {}
     if response.status_code==200:

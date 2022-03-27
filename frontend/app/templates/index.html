@@ -5,9 +5,30 @@
 
 {% block content %}
     <h1>Users and their vehicles report</h1>
-    <ul>
-        {% for results in results[reports_data"]%}
-        <li>results</li>
-        {% endfor %}
-    </ul>
-    {% endblock content %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Vehicle Type</th>
+            <th scope="col">Color</th>
+            <th scope="col">License Plate</th>
+            <th scope="col">Owner last name</th>
+            <th scope="col">Owner first name</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+            {% for result in resullts['report_data'] %}
+          <tr>
+            <th scope="row">{{ result["vehicle_type"] }}</th>
+            <td>{{ result ["vehicle_color"] }}</td>
+            <td>{{ result ["vehicle_licence_plate"] }}</td>
+            <td>{{ reuslt ["user_last_name"] }}</td>
+            <td>{{ reuslt ["user_first_name"] }}</td>
+        </tr>
+
+          {% endfor %}
+
+        </tbody>
+      </table>
+{% endblock content %}

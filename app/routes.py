@@ -5,7 +5,7 @@ from flask import (
     request
 )
 from datetime import datetime
-from app.database import (user, vehicle,report) 
+from app.database import (user, vehicle, report) 
 
 
 app = Flask(__name__)

@@ -5,7 +5,7 @@ from flask import (
     request
 )
 from datetime import datetime
-from app.database import user
+from app.database import (user, vehicles, report)
 
 
 app = Flask(__name__)
@@ -78,5 +78,15 @@ def get_vehicles_by_user_id(user_id):
         "status":"ok",
         "message": "success",
         "vehicles": vehicle_list
+    }
+    return resp
+
+@app.get("/reports/users/vehicles")
+def get_users_and_vehicles_report():
+    output = report.get_users_and_vehicles_join()
+    resp = {
+        "status": "ok",
+        "message": "success",
+        "report_data": output
     }
     return resp

@@ -26,7 +26,9 @@ def get_users_and_vehicles_join():
             "user_first_name": result[0],
             "user_last_name": result[1],
             "user_hobbies": result[2],
-            "vehicle_license_plate": [3],
-            "vehicle_color": [4],
-            "vehicle_type": [5]
+            "user_active": True if results [3] ==1 else False,
+            "vehicle_license_plate": [4],
+            "vehicle_color": [5],
+            "vehicle_type": [6],
         }
+    return out

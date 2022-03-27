@@ -30,7 +30,7 @@ INSERT INTO user(
 ) VALUES (
     "Lenardo",
     "Rios",
-    "Learning"
+    "All kinds of stuff"
 )
 INSERT INTO user(
     first_name,
